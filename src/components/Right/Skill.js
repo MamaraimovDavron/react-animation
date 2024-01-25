@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useSpring, animated } from "react-spring";
+import { Slide } from "react-awesome-reveal";
 
 const Container = styled.div`
   display: flex;
@@ -39,31 +41,48 @@ const Container = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        h3 {
+          display: flex;
+          gap: 2px;
+        }
       }
 
       .item-bottom {
         background-color: #dce8f8;
-        width: 100%;
         height: 10px;
         .box {
           height: 10px;
           background-color: #149ddd;
+          width: 50%;
         }
       }
     }
   }
 `;
 
+const Number = ({ n }) => {
+  const { number } = useSpring({
+    from: { number: 0 },
+    number: n,
+    delay: 500,
+    config: { mass: 10, tension: 20, friction: 10 },
+  });
+
+  return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
+};
+
 const data = [
-  { programming: "HTML", percent: 100 },
-  { programming: "Css", percent: 90 },
-  { programming: "Sass", percent: 85 },
-  { programming: "Bootstrap", percent: 80 },
-  { programming: "Javascript", percent: 75 },
-  { programming: "React", percent: 80 },
-  { programming: "Redux", percent: 70 },
-  { programming: "Material UI", percent: 90 },
+  { programming: "HTML", percent: <Number n={100} />, number: 100 },
+  { programming: "Css", percent: <Number n={90} />, number: 90 },
+  { programming: "Sass", percent: <Number n={85} />, number: 85 },
+  { programming: "Bootstrap", percent: <Number n={80} />, number: 80 },
+  { programming: "Javascript", percent: <Number n={75} />, number: 75 },
+  { programming: "React", percent: <Number n={80} />, number: 80 },
+  { programming: "Redux", percent: <Number n={70} />, number: 70 },
+  { programming: "Material UI", percent: <Number n={90} />, number: 90 },
 ];
+
+console.log(data[1].percent.props);
 
 const Skill = () => {
   return (
@@ -85,11 +104,13 @@ const Skill = () => {
                 <h3>{item.programming}</h3>
                 <h3>{item.percent}%</h3>
               </div>
-              <div className="item-bottom">
-                <div
-                  className="box"
-                  style={{ width: `${item.percent}%` }}
-                ></div>
+              <div className="item-bottom" style={{ width: "100%" }}>
+                <Slide>
+                  <div
+                    className="box"
+                    style={{ width: `${item.number}%` }}
+                  ></div>
+                </Slide>
               </div>
             </div>
           );

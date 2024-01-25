@@ -4,6 +4,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import About from "./About";
 import Fact from "./Fact";
 import Skill from "./Skill";
+import Resume from "./Resume";
 
 const Container = styled.div`
   width: 84%;
@@ -68,6 +69,7 @@ const Right = () => {
       <About />
       <Fact />
       <Skill />
+      <Resume />
     </Container>
   );
 };

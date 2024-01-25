@@ -64,7 +64,7 @@ const Number = ({ n }) => {
   const { number } = useSpring({
     from: { number: 0 },
     number: n,
-    delay: 500,
+    delay: 4000,
     config: { mass: 10, tension: 20, friction: 10 },
   });
 
@@ -82,20 +82,20 @@ const data = [
   { programming: "Material UI", percent: <Number n={90} />, number: 90 },
 ];
 
-console.log(data[1].percent.props);
-
 const Skill = () => {
   return (
     <Container>
       <div>
         <h2>Skills</h2>
       </div>
+
       <p>
         Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
         aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
         quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
         sit in iste officiis commodi quidem hic quas.
       </p>
+
       <div className="grid">
         {data.map((item) => {
           return (

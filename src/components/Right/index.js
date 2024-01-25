@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import About from "./About";
 import Fact from "./Fact";
+import Skill from "./Skill";
 
 const Container = styled.div`
   width: 84%;
@@ -66,6 +67,7 @@ const Right = () => {
       </Background>
       <About />
       <Fact />
+      <Skill />
     </Container>
   );
 };

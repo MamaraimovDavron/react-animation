@@ -44,15 +44,19 @@ const Container = styled.div`
   width: 16%;
   background-color: #040b14;
   height: 100vh;
+  gap: 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+`;
+
+const Aside = styled.div`
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  gap: 20px;
-  color: white;
-  /* position: sticky;
-  top: 0; */
-  /* justify-content: center; */
 `;
 
 const Top = styled.div`
@@ -177,44 +181,46 @@ const Footer = styled.div`
 const Left = () => {
   return (
     <Container>
-      <Top>
-        <img src={avatar} alt="" />
-        <h3>Davron Mamaraimov</h3>
-        <ul>
-          {icons.map((item) => {
-            return (
-              <li>
-                <a href="!#">{item}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </Top>
+      <Aside>
+        <Top>
+          <img src={avatar} alt="" />
+          <h3>Davron Mamaraimov</h3>
+          <ul>
+            {icons.map((item) => {
+              return (
+                <li>
+                  <a href="!#">{item}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </Top>
 
-      <Middle>
-        <ul>
-          {muIcons.map((item, index) => {
-            const menu = menuList[index];
-            return (
-              <li>
-                <a href="!#" className="item">
-                  {item}
-                </a>
-                <a href="!#" className="menu">
-                  {menu}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </Middle>
+        <Middle>
+          <ul>
+            {muIcons.map((item, index) => {
+              const menu = menuList[index];
+              return (
+                <li>
+                  <a href="!#" className="item">
+                    {item}
+                  </a>
+                  <a href="!#" className="menu">
+                    {menu}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </Middle>
 
-      <Footer>
-        <p>
-          &copy; Copyright{" "}
-          <a href="https://t.me/Davron_Mamaraimov">Davron Mamaraimov</a>
-        </p>
-      </Footer>
+        <Footer>
+          <p>
+            &copy; Copyright{" "}
+            <a href="https://t.me/Davron_Mamaraimov">Davron Mamaraimov</a>
+          </p>
+        </Footer>
+      </Aside>
     </Container>
   );
 };

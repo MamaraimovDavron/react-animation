@@ -38,7 +38,7 @@ const Container = styled.div`
         margin: 0;
       }
       .box {
-        border-left: 2px solid #173b6c;
+        border-left: 2px solid #1f5297;
         padding: 10px;
 
         span {

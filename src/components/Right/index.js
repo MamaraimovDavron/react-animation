@@ -5,6 +5,7 @@ import About from "./About";
 import Fact from "./Fact";
 import Skill from "./Skill";
 import Resume from "./Resume";
+import Portfolio from "./Portfolio";
 
 const Container = styled.div`
   width: 84%;
@@ -70,6 +71,7 @@ const Right = () => {
       <Fact />
       <Skill />
       <Resume />
+      <Portfolio />
     </Container>
   );
 };

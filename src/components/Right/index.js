@@ -20,7 +20,7 @@ const Container = styled.div`
 const Background = styled.div`
   width: 100%;
   height: 100vh;
-  background-image: url("https://bootstrapmade.com/demo/templates/iPortfolio/assets/img/profile-img.jpg");
+  background-image: url("https://luxe-host.ru/wp-content/uploads/3/9/4/3948c2cfba607a17612bdc0ad9b9a830.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -32,7 +32,7 @@ const Background = styled.div`
   font-family: "Courier New", Courier, monospace;
   h2 {
     font-size: 50px;
-    color: black;
+    color: white;
     /* position: absolute; */
   }
   p {
@@ -40,7 +40,7 @@ const Background = styled.div`
     margin: 0;
     font-size: 25px;
     font-weight: bold;
-    color: black;
+    color: white;
   }
 `;
 
@@ -58,7 +58,7 @@ const Right = () => {
           <span
             style={{
               fontWeight: "bold",
-              color: "black",
+              color: "white",
               fontFamily: "monospace",
               textDecoration: "2px underline #149DDD",
             }}

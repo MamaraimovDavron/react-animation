@@ -6,6 +6,7 @@ import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import { JackInTheBox } from "react-awesome-reveal";
 
 const data = [
   {
@@ -121,6 +122,7 @@ const Container = styled.div`
     }
   }
 `;
+
 const Services = () => {
   return (
     <Container>
@@ -136,13 +138,15 @@ const Services = () => {
       <div className="grid">
         {data.map((item) => {
           return (
-            <div className="item">
-              <div className="left">{item.icon}</div>
-              <div className="right">
-                <h4>{item.title}</h4>
-                <p>{item.text}</p>
+            <JackInTheBox>
+              <div className="item">
+                <div className="left">{item.icon}</div>
+                <div className="right">
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
               </div>
-            </div>
+            </JackInTheBox>
           );
         })}
       </div>

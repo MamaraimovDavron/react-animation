@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Flip } from "react-awesome-reveal";
+import { Roll } from "react-awesome-reveal";
 
 const Container = styled.div`
   display: flex;
@@ -81,7 +81,7 @@ const Resume = () => {
         <h2>Resume</h2>
       </div>
       <div className="grid">
-        <Flip>
+        <Roll>
           <div className="item">
             <h3>Summary</h3>
             <div className="box">
@@ -123,9 +123,9 @@ const Resume = () => {
               </p>
             </div>
           </div>
-        </Flip>
+        </Roll>
 
-        <Flip>
+        <Roll>
           <div className="item">
             <h3>Professional Experience</h3>
             <div className="box">
@@ -177,7 +177,7 @@ const Resume = () => {
               </ul>
             </div>
           </div>
-        </Flip>
+        </Roll>
       </div>
     </Container>
   );

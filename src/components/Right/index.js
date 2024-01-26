@@ -7,6 +7,7 @@ import Skill from "./Skill";
 import Resume from "./Resume";
 import Portfolio from "./Portfolio";
 import Services from "./Services";
+import Testimonials from "./Testimonials";
 
 const Container = styled.div`
   width: 84%;
@@ -74,6 +75,7 @@ const Right = () => {
       <Resume />
       <Portfolio />
       <Services />
+      <Testimonials />
     </Container>
   );
 };

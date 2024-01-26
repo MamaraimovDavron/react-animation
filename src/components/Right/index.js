@@ -8,6 +8,7 @@ import Resume from "./Resume";
 import Portfolio from "./Portfolio";
 import Services from "./Services";
 import Testimonials from "./Testimonials";
+import Contact from "./Contact";
 
 const Container = styled.div`
   width: 84%;
@@ -76,6 +77,7 @@ const Right = () => {
       <Portfolio />
       <Services />
       <Testimonials />
+      <Contact />
     </Container>
   );
 };
